@@ -63,7 +63,7 @@ const brokerConfig: BrokerOptions = {
 
 	// Define a cacher.
 	// More info: https://moleculer.services/docs/0.14/caching.html
-    cacher: "Memory",
+	cacher: "Memory",
 
 	// Define a serializer.
 	// Available values: "JSON", "Avro", "ProtoBuf", "MsgPack", "Notepack", "Thrift".
@@ -150,44 +150,23 @@ const brokerConfig: BrokerOptions = {
 	// Enable action & event parameter validation. More info: https://moleculer.services/docs/0.14/validating.html
 	validator: true,
 
-	errorHandler: null,
+	// errorHandler: null,
 
 	// Enable/disable built-in metrics function. More info: https://moleculer.services/docs/0.14/metrics.html
 	metrics: {
-		enabled: true,
+		enabled: false,
 		// Available built-in reporters: "Console", "CSV", "Event", "Prometheus", "Datadog", "StatsD"
 		reporter: {
-			type: "Console",
-			options: {
-				// HTTP port
-				port: 3030,
-				// HTTP URL path
-				path: "/metrics",
-				// Default labels which are appended to all metrics labels
-				defaultLabels: (registry: MetricRegistry) => ({
-					namespace: registry.broker.namespace,
-					nodeID: registry.broker.nodeID,
-				}),
-			},
+			type: "",
 		},
 	},
 
 	// Enable built-in tracing function. More info: https://moleculer.services/docs/0.14/tracing.html
 	tracing: {
-		enabled: true,
+		enabled: false,
 		// Available built-in exporters: "Console", "Datadog", "Event", "EventLegacy", "Jaeger", "Zipkin"
 		exporter: {
-			type: "Console", // Console exporter is only for development!
-			options: {
-				// Custom logger
-				logger: null,
-				// Using colors
-				colors: true,
-				// Width of row
-				width: 100,
-				// Gauge width in the row
-				gaugeWidth: 40,
-			},
+			type: "", // Console exporter is only for development!
 		},
 	},
 
@@ -205,7 +184,6 @@ const brokerConfig: BrokerOptions = {
 
 	// Called after broker stopped.
 	// async stopped(broker: ServiceBroker): Promise<void> {},
-
 };
 
 export = brokerConfig;

@@ -35,5 +35,3 @@ In the terminal, try the following commands:
 - `npm run lint`: Run ESLint
 - `npm run ci`: Run continuous test mode with watching
 - `npm test`: Run tests & generate coverage report
-- `npm run dc:up`: Start the stack with Docker Compose
-- `npm run dc:down`: Stop the stack with Docker Compose
