@@ -94,6 +94,12 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 				// Enable/disable logging
 				logging: true,
 			},
+			{
+				path: "users",
+				aliases: {
+					"GET /users": "user.getAllUsers",
+				},
+			},
 		],
 
 		// Do not log client side errors (does not log an error response when the error.code is 400<=X<500)
