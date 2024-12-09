@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "dev": "ts-node ./node_modules/moleculer/bin/moleculer-runner.js --config moleculer.config.ts --hot --repl services/**/*.service.ts",
-    "start": "moleculer-runner --config dist/moleculer.config.js",
+    "start": "ts-node index.ts",
     "test:types": "concurrently npm:prettier npm:lint npm:typecheck",
     "typecheck": "tsc --noEmit && echo \"tsc: no typecheck errors\"",
     "ci": "jest --watch",
@@ -49,7 +49,7 @@
     "moleculer-db-adapter-mongo": "^0.4.16",
     "nats": "^2.7.1",
     "moleculer": "^0.14.27"
-},
+  },
   "engines": {
     "node": ">= 16.x.x"
   }

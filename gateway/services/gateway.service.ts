@@ -100,6 +100,12 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 					"GET /users": "user.getAllUsers",
 				},
 			},
+			{
+				path: "payments",
+				aliases: {
+					"GET /payments": "payment.getAllPayments",
+				},
+			},
 		],
 
 		// Do not log client side errors (does not log an error response when the error.code is 400<=X<500)

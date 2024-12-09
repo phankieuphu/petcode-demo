@@ -7,7 +7,10 @@ interface User {
 
 const UserService: ServiceSchema = {
 	name: "user",
-
+	settings: {
+		port: 3001,
+		ip: "0.0.0.0",
+	},
 	actions: {
 		getAllUsers: {
 			async handler(): Promise<User[]> {

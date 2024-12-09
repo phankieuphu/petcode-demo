@@ -7,6 +7,10 @@ interface Payment {
 
 const PaymentService: ServiceSchema = {
 	name: "payment",
+	settings: {
+		port: 3002,
+		ip: "0.0.0.0",
+	},
 	actions: {
 		getAllPayments: {
 			async handler(): Promise<string> {
