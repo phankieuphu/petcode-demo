@@ -6,7 +6,7 @@ services:
   greeter:
     build:
       context: .
-    image: order
+    image: product
     env_file: docker-compose.env
     environment:
       SERVICES: greeter
@@ -18,7 +18,7 @@ services:
   products:
     build:
       context: .
-    image: order
+    image: product
     env_file: docker-compose.env
     environment:
       SERVICES: products

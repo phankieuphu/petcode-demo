@@ -12,10 +12,15 @@ const PaymentService: ServiceSchema = {
 		ip: "0.0.0.0",
 	},
 	actions: {
-		getAllPayments: {
-			async handler(): Promise<string> {
-				return "All payments method response";
-			},
+		process(ctx) {
+			const { orderId, amount } = ctx.params;
+			this.logger.info("Processing payment for order:", orderId);
+			return { orderId, status: "Paid", amount };
+		},
+		refund(ctx) {
+			const { orderId } = ctx.params;
+			this.logger.info("Refunding payment for order:", orderId);
+			return { orderId, status: " refunded" };
 		},
 	},
 };

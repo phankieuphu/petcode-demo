@@ -18,7 +18,7 @@ data:
   
   CACHER: Memory
   
-  MONGO_URI: mongodb://mongo/order
+  MONGO_URI: mongodb://mongo/product
 
 
 ---
@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: greeter
-        image: order
+        image: product
         imagePullPolicy: IfNotPresent
         envFrom:
         - configMapRef:
@@ -70,7 +70,7 @@ spec:
     spec:
       containers:
       - name: products
-        image: order
+        image: product
         imagePullPolicy: IfNotPresent
         envFrom:
         - configMapRef:

@@ -44,7 +44,10 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 				// The gateway will dynamically build the full routes from service schema.
 				autoAliases: true,
 
-				aliases: {},
+				aliases: {
+					"GET /orders": "saga.createOrder",
+					"GET /test-orders": "order.create",
+				},
 
 				/**
 				 * Before call hook. You can check the request.
@@ -106,6 +109,13 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 					"GET /payments": "payment.getAllPayments",
 				},
 			},
+
+			// {
+			// 	path: "orders",
+			// 	aliases: {
+			// 		"GET /orders": "saga.createOrder",
+			// 	},
+			// },
 		],
 
 		// Do not log client side errors (does not log an error response when the error.code is 400<=X<500)
