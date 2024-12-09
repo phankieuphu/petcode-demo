@@ -5,6 +5,9 @@ services=(
   "/Users/phu.phan/projects/neo/petcode/user"
   "/Users/phu.phan/projects/neo/petcode/order"
   "/Users/phu.phan/projects/neo/petcode/payment"
+  "/Users/phu.phan/projects/neo/petcode/product"
+  "/Users/phu.phan/projects/neo/petcode/saga"
+
 )
 
 for service in "${services[@]}"; do
