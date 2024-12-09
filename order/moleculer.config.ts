@@ -63,7 +63,7 @@ const brokerConfig: BrokerOptions = {
 
 	// Define a cacher.
 	// More info: https://moleculer.services/docs/0.14/caching.html
-    cacher: "Memory",
+	cacher: "Memory",
 
 	// Define a serializer.
 	// Available values: "JSON", "Avro", "ProtoBuf", "MsgPack", "Notepack", "Thrift".
@@ -150,7 +150,7 @@ const brokerConfig: BrokerOptions = {
 	// Enable action & event parameter validation. More info: https://moleculer.services/docs/0.14/validating.html
 	validator: true,
 
-	errorHandler: null,
+	// errorHandler: null,
 
 	// Enable/disable built-in metrics function. More info: https://moleculer.services/docs/0.14/metrics.html
 	metrics: {
@@ -205,7 +205,6 @@ const brokerConfig: BrokerOptions = {
 
 	// Called after broker stopped.
 	// async stopped(broker: ServiceBroker): Promise<void> {},
-
 };
 
 export = brokerConfig;

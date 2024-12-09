@@ -1,5 +1,5 @@
 {
-  "name": "order",
+  "name": "payment",
   "version": "1.0.0",
   "description": "My Moleculer-based microservices project",
   "scripts": {
@@ -9,14 +9,7 @@
     "test:types": "concurrently npm:prettier npm:lint npm:typecheck",
     "typecheck": "tsc --noEmit && echo \"tsc: no typecheck errors\"",
     "ci": "jest --watch",
-    "test": "jest --coverage",
-    "lint": "cross-env TIMING=1 eslint . --ext cjs,mjs,js,jsx,ts,tsx",
-    "lint:fix": "cross-env TIMING=1 eslint . --ext cjs,mjs,js,jsx,ts,tsx --fix",
-    "prettier": "prettier . --ignore-unknown --check",
-    "prettier:fix": "prettier . --ignore-unknown --write",
-    "dc:up": "docker-compose up --build -d",
-    "dc:logs": "docker-compose logs -f",
-    "dc:down": "docker-compose down"
+    "test": "jest --coverage"
   },
   "keywords": [
     "microservices",
@@ -24,15 +17,6 @@
   ],
   "author": "",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.44.0",
-    "@typescript-eslint/parser": "^5.44.0",
-    "eslint": "^8.28.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^27.1.6",
-    "prettier": "^2.8.0",
     "@jest/globals": "^29.3.1",
     "@types/jest": "^29.2.3",
     "@types/node": "^18.11.9",
