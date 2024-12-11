@@ -46,7 +46,8 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 
 				aliases: {
 					"GET /orders": "saga.createOrder",
-					"GET /test-orders": "order.create",
+					"GET /test-orders": "order-query.get",
+					"POST /create-order": "order-command.create",
 				},
 
 				/**
